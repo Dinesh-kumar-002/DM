@@ -282,12 +282,18 @@ a{
 /* our story  */
 /* services card */
 
-.custom-service-card{
-    position: relative;
-    border: 0;
-    overflow-y: hidden;
+.custom-service-card {
+  position: relative;
+  border: 0;
+  overflow-y: hidden;
+  width: 90%;
+  border-radius: 19px;
+  margin-top: 20px;
+  box-shadow: 5px 5px 13px -13px;
 }
-
+.custom-card-img-top{
+  border-radius: 19px;
+}
 
 .custom-service-card-body {
     position: absolute;
@@ -317,9 +323,10 @@ a{
     bottom: -194px;
     background: white;
 }
-.custom-service-card-body h3 a{
-    text-decoration: none;
-    color: black;
+.custom-service-card-body h3 a {
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
 }
 
 /* services card */
@@ -373,13 +380,12 @@ a{
     /* -webkit-overflow-scrolling: touch; */
     }
     .custom-case-card {
+      box-shadow: 2px 2px 15px -5px black;
+      border-radius: 19px !important;
       flex: 0 0 auto;
       margin: 15px;
-      background-color: blue;
-      border: 1px solid #fff;
-      max-width: 440px;
-      min-width: 350px;
-      /* min-height: 400px; */
+      max-width: 374px;
+      min-width: 346px;
   }
 .custom-case-card img{
     width: 100%;
@@ -391,6 +397,8 @@ a{
 /* brand logo  */
 .brand-logo{
     width: 100px;
+    margin: 30px 0px;
+
     filter:grayscale(1) brightness(100);
 }
 .brand-logo:hover{
@@ -432,20 +440,26 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     padding: 50px 0;
+    max-width: 500px;
   }
   .review-content{
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-direction: column;
     max-width: 650px;
   }
-  .review-image img{
-    width: 60px;
-    filter:grayscale(1) brightness(100);
-  }
+  .review-image img {
+    width: 75px;
+    padding: 7px;
+}
+
+.review-image{
+
+    background: #ffffff;
+    border-radius: 10px;
+
+}
 
 
   .our-story-image {
@@ -565,6 +579,8 @@ a{
   /* Main CSS */
   .navbar {
     padding: 15px 30px;
+    box-shadow: 2px 2px 23px -19px black;
+  
   }
   .navbar ul {
     list-style: none;
@@ -1375,4 +1391,10 @@ a{
   background-position: 100%;
   color: #ffffff;
   border: 1px solid white;
+}
+
+.mySwiper-testimonial .swiper-slide{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
