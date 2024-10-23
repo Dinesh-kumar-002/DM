@@ -257,13 +257,17 @@ a{
     text-align: center;
     border-radius: 40px;
     border: 1px solid white;
-    padding: 10px 20px;
+    padding: 15px 20px;
     margin-top: 5px;
     letter-spacing: 1px;
 }
 .btn-3:hover{
     color: white;
     border:1px solid transparent;
+}
+
+.mySwiper3{
+  border-radius: 19px;
 }
 
 
@@ -279,6 +283,9 @@ a{
         opacity: 0.1;
     }
     
+}
+.hover-effect:hover {
+  box-shadow: 2px 2px 12px -4px black;
 }
 /* our story  */
 /* services card */
@@ -460,10 +467,25 @@ a{
     max-width: 650px;
   }
   .review-image img {
-    width: 75px;
+    width: 90px;
     padding: 7px;
 }
-
+.review-content p{
+  line-height: 35px;
+}
+.review-content h2{
+  position: relative;
+}
+.review-content h2::after {
+  position: absolute;
+  top: -88px;
+  right: 44px;
+  content: "\"\"";
+  color: #ffffff36;
+  font-size: 120px;
+  font-style: italic;
+  transform: skewX(354deg);
+}
 .review-image{
 
     background: #ffffff;
@@ -1368,7 +1390,7 @@ a{
   }
   #customer .col-12 input:not([type="checkbox"]) {
 
-    padding: 11px;
+    padding: 15px 11px;
     border: 1px solid #bababa; 
     border-radius: 0;
     background-color: transparent;
@@ -1376,6 +1398,7 @@ a{
   #customer .col-12 label.label-move {
     top: -8px;
     left: 20px;
+    font-weight: 700;
 }
 
 .accordion-button{
@@ -1507,4 +1530,22 @@ body::-webkit-scrollbar-thumb {
 }
 /* preloader  */
 
+.accordion-body {
+  padding: 0 !important;
+}
 
+.accordion-body p{
+  color: #626262;
+}
+.accordion-button::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='12' y1='5' x2='12' y2='19'/%3E%3Cline x1='5' y1='12' x2='19' y2='12'/%3E%3C/svg%3E") !important;
+  background-color: #f1f1f1;
+  width: 25px;
+  height: 25px;
+  background-position: center;
+  border-radius: 50%;
+}
+.accordion-button:not(.collapsed)::after{
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='5' y1='12' x2='19' y2='12'/%3E%3C/svg%3E") !important;
+  
+}
