@@ -1,3 +1,18 @@
+document.addEventListener("DOMContentLoaded", function() {
+  // Wait for the page to load completely
+  window.addEventListener("load", function() {
+    // Hide the preloader
+    const preloader = document.getElementById('preloader');
+    preloader.style.display = 'none';
+    
+    // Show the website content
+    const content = document.querySelector('.content');
+    content.style.display = 'block';
+  });
+});
+
+
+
 // header bg to white
 var logo = document.querySelectorAll('.navbar-brand img')[0];
 var links = document.querySelectorAll('.nav-link');

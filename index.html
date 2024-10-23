@@ -43,6 +43,11 @@
 
 
   <body>
+    <div id="preloader">
+      <video src="assets/videos/preloader.mp4" width="250px" autoplay muted loop></video>
+      <!-- <div class="spinner">
+      </div> -->
+    </div>
     <!-- header  -->
     <!-- <header>
       <nav class="d-flex p-3 justify-content-between align-items-center">
@@ -252,7 +257,7 @@
           <div
             class="custom-container"
             id="custom-container"
-            style="background: var(--bg-blue)"
+            style="background: #000000"
           >
             <div class="text-white split-word">
               Digital Mantraaz is an enthusiastic team of skilled individuals, each a genius in their own right! We create marketing strategies that connect with the target audience and make an impact that’s what we call sales.
@@ -271,21 +276,17 @@
               >
                 <div class="texting1 texting">
                   <p class="large-text">Imagine</p>
-                  <p class="mt-1" style="line-height: 40px;">Everything starts with imagination. We think about your brand even more than you do. By fusing our creativity with your brand's value, we can create wonders.</p>
-                  <!-- <button class="btn-2">view More <i class="fa-solid fa-arrow-right"></i></button> -->
+                  <p class="mt-1 paragraph" style="line-height: 40px;">Everything starts with imagination. We think about your brand even more than you do. By fusing our creativity with your brand's value, we can create wonders.</p>
+                  
                   <button class="btn button-2 button">
                     <span>Learn More</span>
                   </button>
                 </div>
               </div>
               <div
-                class="col-12 col-md-6 col-lg-4 d-flex justify-content-center align-items-center"
+                class="col-12 col-md-6 col-lg-4 d-flex justify-content-center align-items-center overflow-hidden"
               >
-                <img
-                  src="assets/images/DM Website Assets/bulb.png"
-                  alt=""
-                  class="bulb-image w-50"
-                />
+                <video src="assets/videos/butterfly.mp4" autoplay muted loop style="width: 100%;height: 100%;" class="butterfly"></video>
               </div>
               </div>
             </div>
@@ -295,13 +296,9 @@
             <div class="container-fluid">
               <div class="row">
                 <div
-                class="col-12 col-md-6 col-lg-4 d-flex justify-content-center align-items-center order-2 order-md-1"
+                class="col-12 col-md-6 col-lg-4 d-flex justify-content-center align-items-center order-2 order-md-1 overflow-hidden"
               >
-                <img
-                  src="assets/images/DM Website Assets/rocket.png"
-                  alt=""
-                  class="rocket-image w-50"
-                />
+              <video src="assets/videos/build.mp4" autoplay muted loop style="width: 100%;height: 100%;" class="build"></video>
               </div>
               <div
                 class="col-12 col-md-6 col-lg-8 d-flex justify-content-center align-items-center order-1 order-md-2"
@@ -329,13 +326,9 @@
                 </div>
               </div>
               <div
-                class="col-12 col-md-6 col-lg-4 d-flex justify-content-center align-items-center"
+                class="col-12 col-md-6 col-lg-4 d-flex justify-content-center align-items-center overflow-hidden"
               >
-                <img
-                  src="assets/images/DM Website Assets/Icon setting.png"
-                  alt=""
-                  class="setting-image w-50"
-                />
+              <video src="assets/videos/market.mp4" autoplay muted loop style="width: 100%;height: 100%;" class="rocket"></video>
               </div>
               </div>
             </div>
@@ -1090,9 +1083,9 @@ var tl1 = gsap.timeline({
     trigger: ".custom-container-1", 
     start: "top 100px",         
     end: "bottom top",           
-    scrub: 1,                    
+    scrub: true,                    
     pin: true,                   
-    markers: true                
+    // markers: true                
   }
 });
 var tl2 = gsap.timeline({
@@ -1102,7 +1095,7 @@ var tl2 = gsap.timeline({
     end: "bottom top",           
     scrub: 1,                    
     pin: true,                   
-    markers: true                
+    // markers: true                
   }
 });
 var tl3 = gsap.timeline({
@@ -1112,14 +1105,16 @@ var tl3 = gsap.timeline({
     end: "bottom 100px",           
     scrub: 1,                    
     pin: true,                   
-    markers: true                
+    // markers: true                
   }
 });
 
-tl1.fromTo('.texting1', { x: -50 ,opacity:0,filter: 'blur(5px)'}, {  x: 0,opacity:1 ,filter: 'blur(0px)'});
-tl1.fromTo('.bulb-image', {opacity:0.3,scale:0.7,filter:'dropShadow(1px ,2px ,20px ,black)'}, {opacity:1,scale:1});
-tl2.fromTo('.texting2', { x: -50 ,opacity:0,filter: 'blur(5px)'}, {  x: 0,opacity:1 ,filter: 'blur(0px)'});
-tl3.fromTo('.texting3', { x: -50 ,opacity:0,filter: 'blur(5px)'}, {  x: 0,opacity:1 ,filter: 'blur(0px)'});
+tl1.fromTo('.custom-container-1 .large-text', { x: -50,rotationY: '40deg',opacity:0.5,filter: 'blur(2px)'}, {x: -50,rotationY: '0deg', scale:1.1, x: 20,opacity:1 ,filter: 'blur(0px)'});
+tl1.fromTo('.custom-container-1 .butterfly', { x: -50,rotationY: '40deg',filter: 'blur(2px)'}, {x: -50,rotationY: '0deg', scale:1.1, x: 20,filter: 'blur(0px)'});
+tl2.fromTo('.custom-container-2 .large-text', { scale:1.1,x: -10 ,opacity:0.5,filter: 'blur(1px)'}, { scale:1, x: 0,opacity:1 ,filter: 'blur(0px)'});
+tl2.fromTo('.custom-container-2 .build', { x: -50,filter: 'blur(2px)'}, {x: -50,rotation: '40deg', scale:1.1, x: 20,filter: 'blur(0px)'});
+tl3.fromTo('.custom-container-3 .large-text', { scale:1.1,x: -10 ,opacity:0.5,filter: 'blur(1px)'}, { scale:1, x: 0,opacity:1 ,filter: 'blur(0px)'});
+tl3.fromTo('.custom-container-3 .rocket', { x: -50,filter: 'blur(2px)'}, {x: -50,rotation: '-30deg', scale:1.1, x: 20,filter: 'blur(0px)'});
 
 // second animation
 
@@ -1146,7 +1141,7 @@ gsap.to(sections, {
     trigger: ".customContainer",
     pin: true,
     scrub: 1.5,
-    start:'top 20%',
+    start:'top 35%',
     snap: 1 / (sections.length - 1),
     end: () => "+=" + document.querySelector(".customContainer").offsetWidth
   }
@@ -1168,6 +1163,77 @@ var swiper = new Swiper(".mySwiper-testimonial", {
      
     });
 
+ 
+
+    // Utility function to wrap each line into a <div> container
+function splitIntoLines(element) {
+    const lines = [];
+    const words = element.innerHTML.split(' ');  // Split words
+    let tempLine = '';
+
+    element.innerHTML = '';  // Clear the original content
+
+    words.forEach((word, index) => {
+        const span = document.createElement('span');
+        span.textContent = word + ' ';
+        element.appendChild(span);
+
+        const tempHeight = element.clientHeight;  // Height after adding the word
+
+        // If the height changes, it means the word has wrapped to a new line
+        if (lines.length && tempHeight > lines[lines.length - 1].height) {
+            lines.push({
+                text: tempLine,
+                height: tempHeight
+            });
+            tempLine = word + ' ';
+        } else {
+            tempLine += word + ' ';
+        }
+    });
+
+    // Push the remaining text to the final line
+    lines.push({
+        text: tempLine,
+        height: element.clientHeight
+    });
+
+    // Clear the content and wrap each line in a separate <div>
+    element.innerHTML = '';
+    lines.forEach(line => {
+        const div = document.createElement('div');
+        div.textContent = line.text.trim();
+        element.appendChild(div);
+    });
+}
+
+// Select the paragraph element
+const paragraph = document.querySelector('.paragraph');
+
+// Split the paragraph into lines
+splitIntoLines(paragraph);
+
+// Animate each line on scroll
+gsap.fromTo(".paragraph div", 
+  {
+    x: -35,rotationY: '40deg',
+  }, 
+  {
+    scrollTrigger: {
+        trigger: ".paragraph", 
+        start: 'top center',               
+        end: 'bottom 100%',          
+        scrub: 1,                    
+    },
+    x: 0,              // End at normal position
+
+    rotationY: '0deg', // End with no rotation
+    y: -10,            // End 10px higher
+    opacity: 1,        // End fully visible
+    stagger: 0.6,      // Delay between each line
+    ease: "power2.out" // Smooth easing
+  }
+);
 
 
 
